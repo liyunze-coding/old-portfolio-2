@@ -45,6 +45,18 @@ $(window).on("load", async function () {
 
     document.getElementById("today").innerText = weekday[date.getDay()];
 
+    let dots_spans = ``;
+    let slides = document.getElementsByClassName("mySlides");
+    
+    for (let i = 1; i <= slides.length; i++) {
+        dots_spans += `<span
+            class="dot"
+            onclick="currentSlide(${i})"
+        ></span>\n`
+    }
+
+    document.getElementById(`dots`).innerHTML = dots_spans;
+
     consoleText(
         [
             " great",
@@ -57,6 +69,8 @@ $(window).on("load", async function () {
         ],
         "day-adjective"
     );
+
+    
 });
 
 let slideIndex = 1;
