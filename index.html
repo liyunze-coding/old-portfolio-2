@@ -409,21 +409,17 @@
 					</div>
 
 					<div class="mySlides fade">
-						<a
-							href="https://github.com/liyunze-coding/human-benchmark-bots/tree/master/visual_memory"
+						<video
+							muted
+							onmouseover="this.play()"
+							onmouseout="this.pause();this.currentTime=0;"
+							class="project-icon"
 						>
-							<video
-								muted
-								onmouseover="this.play()"
-								onmouseout="this.pause();this.currentTime=0;"
-								class="project-icon"
-							>
-								<source
-									src="./videos/visual_memory_demo.mov"
-									type="video/mp4"
-								/>
-							</video>
-						</a>
+							<source
+								src="./videos/visual_memory_demo.mov"
+								type="video/mp4"
+							/>
+						</video>
 						<div class="description">
 							Visual Memory bot that plays Human
 							Benchmark's Visual Memory Test. Uses OpenCV
