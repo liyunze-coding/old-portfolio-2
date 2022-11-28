@@ -401,6 +401,13 @@ input {
 	margin-bottom:10px;
 }
 
+.github-repo, .github-repo:hover {
+	text-decoration:underline;
+	color:white;
+}
+
+
+
 @media screen and (max-width: 1200px) {
 	:root {
 		--height-of-section: fit-content;
