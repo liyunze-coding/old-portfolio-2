@@ -45,18 +45,6 @@ $(window).on("load", async function () {
 
     document.getElementById("today").innerText = weekday[date.getDay()];
 
-    let dots_spans = ``;
-    let slides = document.getElementsByClassName("mySlides");
-    
-    for (let i = 1; i <= slides.length; i++) {
-        dots_spans += `<span
-            class="dot"
-            onclick="currentSlide(${i})"
-        ></span>\n`
-    }
-
-    document.getElementById(`dots`).innerHTML = dots_spans;
-
     consoleText(
         [
             " great",
@@ -69,8 +57,6 @@ $(window).on("load", async function () {
         ],
         "day-adjective"
     );
-
-    
 });
 
 let slideIndex = 1;
@@ -90,18 +76,36 @@ function showSlides(n) {
 	let i;
 	let slides = document.getElementsByClassName("mySlides");
 	let dots = document.getElementsByClassName("dot");
+    let videos = document.getElementsByClassName("project-icon");
 	if (n > slides.length) {slideIndex = 1}
 	if (n < 1) {slideIndex = slides.length}
 	for (i = 0; i < slides.length; i++) {
 		slides[i].style.display = "none";
+        videos[i].autoplay = false;
 	}
 	for (i = 0; i < dots.length; i++) {
 		dots[i].className = dots[i].className.replace(" active", "");
 	}
 	slides[slideIndex-1].style.display = "block";
     slides[slideIndex-1].style.opacity = "1";
+    videos[slideIndex-1].autoplay = true;
+
+    for (i = 0; i < videos.length; i++) {
+        videos[i].load();
+    }
+    
 	dots[slideIndex-1].className += " active";
 }
+
+document.querySelectorAll('.project-icon').forEach((video) => {
+    video.addEventListener('click', function (event) {
+        if (this.paused){
+            this.play(); 
+        } else {
+            this.pause();
+        }
+    });
+ });
 
 console.log(`
 _____                   _____       _   _
@@ -121,8 +125,8 @@ var vids_muted = true;
 function videos_unmuted() {
     let button = document.getElementById("mute-button");
     button.innerText = vids_muted
-        ? "Click to mute audio"
-        : "Click to play audio";
+        ? "Click to play audio"
+        : "Click to mute audio";
     // button.style.backgroundColor = vids_muted ? '#dc0000' : '#00bf2d';
     vids_muted = !vids_muted;
 

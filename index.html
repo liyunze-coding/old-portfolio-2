@@ -346,15 +346,10 @@
 					<div class="mySlides fade">
 						<video
 							muted
-							onmouseover="this.play()"
-							onmouseout="this.pause();this.currentTime=0;"
+							loop
 							class="project-icon"
-						>
-							<source
-								src="./videos/aim_lab_demo.mov"
-								type="video/mp4"
-							/>
-						</video>
+							src="./videos/aim_lab_demo.mov"
+						></video>
 						<div class="description">
 							Aim Lab bot that takes over your mouse to
 							play Aim Lab. Uses <b>OpenCV</b> for screen
@@ -366,8 +361,7 @@
 					<div class="mySlides fade">
 						<video
 							muted
-							onmouseover="this.play()"
-							onmouseout="this.pause();this.currentTime=0;"
+							loop
 							class="project-icon"
 							src="./videos/chess_opencv_demo.mov"
 						></video>
@@ -387,15 +381,10 @@
 					<div class="mySlides fade">
 						<video
 							muted
-							onmouseover="this.play()"
-							onmouseout="this.pause();this.currentTime=0;"
+							loop
 							class="project-icon"
-						>
-							<source
-								src="./videos/chimp_test.mov"
-								type="video/mp4"
-							/>
-						</video>
+							src="./videos/chimp_test.mov"
+						></video>
 						<div class="description">
 							A Chimp Test bot that plays Chimp Test on
 							Human Benchmark with incredible speed. Uses
@@ -411,15 +400,10 @@
 					<div class="mySlides fade">
 						<video
 							muted
-							onmouseover="this.play()"
-							onmouseout="this.pause();this.currentTime=0;"
+							loop
 							class="project-icon"
-						>
-							<source
-								src="./videos/visual_memory_demo.mov"
-								type="video/mp4"
-							/>
-						</video>
+							src="./videos/visual_memory_demo.mov"
+						></video>
 						<div class="description">
 							Visual Memory bot that plays Human
 							Benchmark's Visual Memory Test. Uses OpenCV
@@ -436,15 +420,10 @@
 					<div class="mySlides fade">
 						<video
 							muted
-							onmouseover="this.play()"
-							onmouseout="this.pause();this.currentTime=0;"
+							loop
 							class="project-icon"
-						>
-							<source
-								src="./videos/monkeytype.mov"
-								type="video/mp4"
-							/>
-						</video>
+							src="./videos/monkeytype.mov"
+						></video>
 						<div class="description">
 							A MonkeyType bot that types at a whopping
 							620+ WPM using <b>OpenCV</b> for screen image
@@ -458,7 +437,28 @@
 							>
 						</div>
 					</div>
-					<div id="dots"></div>
+					<div id="dots">
+						<span
+							class="dot"
+							onclick="currentSlide(1)"
+						></span>
+						<span
+							class="dot"
+							onclick="currentSlide(2)"
+						></span>
+						<span
+							class="dot"
+							onclick="currentSlide(3)"
+						></span>
+						<span
+							class="dot"
+							onclick="currentSlide(4)"
+						></span>
+						<span
+							class="dot"
+							onclick="currentSlide(5)"
+						></span>
+					</div>
 
 					<!-- Next and previous buttons -->
 					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>

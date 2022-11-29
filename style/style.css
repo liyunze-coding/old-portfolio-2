@@ -250,17 +250,21 @@ a.socials {
   
   /* Hide the images by default */
 .mySlides {
-	display: flex;
+	display: none;
 	height:fit-content;
 	align-items: center;
 	justify-content: center;
 
 	flex-direction:column;
 
+	
+
 	/* border:solid 1px white; */
 }
 
 .mySlides video {
+	cursor:pointer;
+
 	width:70%;
 	display:block;
 	margin-left:auto;
