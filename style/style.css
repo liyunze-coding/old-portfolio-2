@@ -251,15 +251,6 @@ a.socials {
   /* Hide the images by default */
 .mySlides {
 	display: none;
-	height:fit-content;
-	align-items: center;
-	justify-content: center;
-
-	flex-direction:column;
-
-	
-
-	/* border:solid 1px white; */
 }
 
 .mySlides video {

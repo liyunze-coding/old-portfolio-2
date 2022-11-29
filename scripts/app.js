@@ -125,8 +125,8 @@ var vids_muted = true;
 function videos_unmuted() {
     let button = document.getElementById("mute-button");
     button.innerText = vids_muted
-        ? "Click to play audio"
-        : "Click to mute audio";
+        ? "Click to mute audio"
+        : "Click to play audio";
     // button.style.backgroundColor = vids_muted ? '#dc0000' : '#00bf2d';
     vids_muted = !vids_muted;
 
