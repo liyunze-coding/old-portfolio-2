@@ -82,6 +82,7 @@ function showSlides(n) {
 	for (i = 0; i < slides.length; i++) {
 		slides[i].style.display = "none";
         videos[i].autoplay = false;
+        videos[i].load();
 	}
 	for (i = 0; i < dots.length; i++) {
 		dots[i].className = dots[i].className.replace(" active", "");
@@ -89,10 +90,6 @@ function showSlides(n) {
 	slides[slideIndex-1].style.display = "block";
     slides[slideIndex-1].style.opacity = "1";
     videos[slideIndex-1].autoplay = true;
-
-    for (i = 0; i < videos.length; i++) {
-        videos[i].load();
-    }
     
 	dots[slideIndex-1].className += " active";
 }
