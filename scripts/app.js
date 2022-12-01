@@ -1,34 +1,3 @@
-const scroll_observer = new IntersectionObserver((entries) => {
-    entries.forEach( (entry) => {
-        if (entry.isIntersecting){
-            entry.target.classList.add('show-slide')
-        } else {
-            entry.target.classList.remove('show-slide')
-        }
-    })
-})
-
-const fade_observer = new IntersectionObserver((entries) => {
-    entries.forEach( (entry) => {
-        if (entry.isIntersecting){
-            entry.target.classList.add('show-fade');
-        } else {
-            entry.target.classList.remove('show-fade')
-        }
-    })
-})
-
-const hiddenScrolls = document.querySelectorAll('.hidden-slide');
-const hiddenFades = document.querySelectorAll('.hidden-fade');
-
-hiddenScrolls.forEach((el) => scroll_observer.observe(el));
-hiddenFades.forEach((el) => fade_observer.observe(el));
-
-function scrolltoTop() {
-    window.scrollTo(0, 0);
-    return false;
-}
-
 $(window).on("load", async function () {
     let date = new Date();
     let weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
@@ -102,20 +71,7 @@ document.querySelectorAll('.project-icon').forEach((video) => {
             this.pause();
         }
     });
- });
-
-console.log(`
-_____                   _____       _   _
-|  __ \\                 |  __ \\     | | | |
-| |__) |   _  __ _ _ __ | |__) |   _| |_| |__   ___  _ __
-|  _  / | | |/ _\` | '_ \\|  ___/ | | | __| '_ \\ / _ \\| '_ \\
-| | \\ \\ |_| | (_| | | | | |   | |_| | |_| | | | (_) | | | |
-|_|  \\_\\__, |\\__,_|_| |_|_|    \\__, |\\__|_| |_|\\___/|_| |_|
-        __/ |                   __/ |
-       |___/                   |___/
-`);
-console.log(`Check out https://www.twitch.tv/RyanPython :>`)
-
+});
 // (un)muting project videos
 var vids_muted = true;
 
@@ -189,3 +145,16 @@ function consoleText(words, id) {
         }
     }, 400);
 }
+
+console.log(`
+_____                   _____       _   _
+|  __ \\                 |  __ \\     | | | |
+| |__) |   _  __ _ _ __ | |__) |   _| |_| |__   ___  _ __
+|  _  / | | |/ _\` | '_ \\|  ___/ | | | __| '_ \\ / _ \\| '_ \\
+| | \\ \\ |_| | (_| | | | | |   | |_| | |_| | | | (_) | | | |
+|_|  \\_\\__, |\\__,_|_| |_|_|    \\__, |\\__|_| |_|\\___/|_| |_|
+        __/ |                   __/ |
+       |___/                   |___/
+`);
+console.log(`Check out https://www.twitch.tv/RyanPython :>`)
+
