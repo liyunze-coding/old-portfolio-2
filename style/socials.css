@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+* {
+    padding:0;
+    margin:0;
+}
+
+#main-content {
+    display:flex;
+    align-items: center;
+    /* justify-content: center; */
+    margin-top:80px;
+    /* margin-bottom:70px; */
+
+    width:100%;
+    /* height:100vh; */
+
+    flex-direction:column;
+    /* color:; */
+}
+
+#socials-title h1 {
+    font-family:'Montserrat',sans-serif;
+    font-weight:bold;
+}
+
+#socials-category {
+    display:grid;
+    grid-template-columns: 1fr;
+    row-gap:30px;
+    margin-top:30px;
+}
+
+.social-media-box {
+    width:400px;
+    height:50px;
+    
+    background-color:#2b2b2b;
+    border-radius:5px;
+
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction:row;
+
+    box-shadow:5px 5px 5px var(--color-shadow);
+}
+
+.social-media-box:hover > h3{
+    text-decoration: underline;
+}
+
+.social-media-box h3 {
+    font-family:'Montserrat',Arial, Helvetica, sans-serif;
+    font-size:1.2em;
+    color:white;
+    text-decoration:none;
+}
