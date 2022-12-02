@@ -49,7 +49,7 @@
 }
 
 .social-media-box:hover > h3{
-    text-decoration: underline;
+    /* text-decoration: underline; */
     color:var(--color-shadow);
 }
 
