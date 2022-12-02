@@ -18,8 +18,9 @@ const fade_observer = new IntersectionObserver((entries) => {
     })
 })
 
-const hiddenScrolls = document.querySelectorAll('.hidden-slide');
-const hiddenFades = document.querySelectorAll('.hidden-fade');
-
-hiddenScrolls.forEach((el) => scroll_observer.observe(el));
-hiddenFades.forEach((el) => fade_observer.observe(el));
+$(window).on("load", async function () {
+    const hiddenScrolls = document.querySelectorAll('.hidden-slide');
+    const hiddenFades = document.querySelectorAll('.hidden-fade');
+    hiddenScrolls.forEach((el) => scroll_observer.observe(el));
+    hiddenFades.forEach((el) => fade_observer.observe(el));
+});
