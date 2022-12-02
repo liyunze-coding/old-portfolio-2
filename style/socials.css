@@ -51,6 +51,7 @@
 .social-media-box:hover > h3{
     /* text-decoration: underline; */
     color:var(--color-shadow);
+    transition: color ease-in 0.2s;
 }
 
 .social-media-box h3 {
