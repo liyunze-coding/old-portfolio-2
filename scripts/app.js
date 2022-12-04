@@ -2,11 +2,11 @@ $(window).on("load", async function () {
     let date = new Date();
     let weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
     let year = date.getFullYear();
-    let month = date.getMonth() + 1;
-    let day = date.getDate();
     let age = year - 2004;
 
-    if (month < 11 || day < 28) {
+    let birthdate = new Date(`${year}-11-28`);
+
+    if (birthdate > date) {
         age--;
     }
 
