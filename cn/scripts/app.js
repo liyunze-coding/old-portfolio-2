@@ -1,6 +1,6 @@
 $(window).on("load", async function () {
     let date = new Date();
-    let weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    let weekday = ["日","一","二","三","四","五","六"];
     let year = date.getFullYear();
     let age = year - 2004;
 
@@ -16,14 +16,12 @@ $(window).on("load", async function () {
 
     consoleText(
         [
-            " great",
-            "n awesome",
-            " splendid",
-            "n interesting",
-            "n incredible",
-            " memorable",
-            " wonderful",
-            " supercalifragilisticexpialidocious"
+            "精彩",
+            "美好",
+            "晴朗",
+            "奇妙",
+            "极好",
+            "美妙"
         ],
         "day-adjective"
     );
@@ -79,8 +77,8 @@ var vids_muted = true;
 function videos_unmuted() {
     let button = document.getElementById("mute-button");
     button.innerText = vids_muted
-        ? "Click to mute audio"
-        : "Click to play audio";
+        ? "静音"
+        : "播音";
     // button.style.backgroundColor = vids_muted ? '#dc0000' : '#00bf2d';
     vids_muted = !vids_muted;
 
@@ -126,7 +124,7 @@ function consoleText(words, id) {
                 x = -1;
                 letterCount += x;
                 waiting = false;
-            }, 3000);
+            }, 2000);
         } else if (waiting === false) {
             target.innerHTML = words[0].substring(
                 0,
@@ -134,7 +132,7 @@ function consoleText(words, id) {
             );
             letterCount += x;
         }
-    }, 120);
+    }, 700);
     window.setInterval(function () {
         if (visible === true) {
             con.className = "console-underscore hidden";
@@ -157,5 +155,5 @@ _____                   _____       _   _
         __/ |                   __/ |
        |___/                   |___/
 `);
-console.log(`Check out https://www.twitch.tv/RyanPython :>`)
+console.log(`点击 https://www.twitch.tv/RyanPython :>`)
 

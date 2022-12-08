@@ -8,14 +8,18 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 
-		<link rel="shortcut icon" type="image/jpg" href="images/logo.jpg" />
+		<link
+			rel="shortcut icon"
+			type="image/jpg"
+			href="./../images/logo.jpg"
+		/>
 
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="style/style.css" />
-		<title>Ryan's website</title>
+		<link rel="stylesheet" href="./../style/style.css" />
+		<title>Ryan的网站</title>
 	</head>
 	<body>
 		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
@@ -23,7 +27,7 @@
 				<a class="navbar-brand" href="#Home"
 					><img
 						style="height: 35px; padding: 0; margin: 0"
-						src="./images/logo.jpg"
+						src="./../images/logo.jpg"
 				/></a>
 
 				<button
@@ -43,31 +47,27 @@
 				>
 					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 						<li id="lang" class="nav-link nav-button">
-							<a href="./cn/">CN</a>
+							<a href="./../">EN</a>
 						</li>
 						<li class="nav-item">
 							<a
 								id="home-button"
 								class="nav-link nav-button"
 								href="#Home"
-								>Home</a
+								>主页</a
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#About">About</a>
+							<a class="nav-link" href="#About">关于</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#Skills">Skills</a>
+							<a class="nav-link" href="#Skills">技能</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#Projects"
-								>Projects</a
-							>
+							<a class="nav-link" href="#Projects">项目</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#Contact"
-								>Contact</a
-							>
+							<a class="nav-link" href="#Contact">联络</a>
 						</li>
 					</ul>
 				</div>
@@ -75,23 +75,23 @@
 		</nav>
 		<section id="Home">
 			<div id="home-div" class="content">
-				<img class="logo" src="./images/circle_logo.png" />
+				<img class="logo" src="./../images/circle_logo.png" />
 				<h1 class="hidden-slide intro section-title">
-					Hey, I'm Ryan!
+					你好, 我是Ryan!
 				</h1>
 				<h5 class="hidden-fade" style="--order: 8">
-					Student · Streamer · Developer
+					大学生 · 广播员 · 程序员
 				</h5>
 			</div>
 		</section>
 
 		<section id="About">
 			<div id="about-content" class="content">
-				<h2 class="section-title">About</h2>
+				<h2 class="section-title">关于</h2>
 				<div id="about-box" class="content-box">
 					<div class="mini-content-box">
-						<img src="./images/pfp.png" class="pfp" />
-						<p>
+						<img src="./../images/pfp.png" class="pfp" />
+						<!-- <p>
 							My name is Ryan, I am
 							<span id="age"></span> years old and I am a
 							college student based in Asia. I speak fluent
@@ -100,65 +100,68 @@
 							<b>Web Development</b>. I plan on pursuing a
 							career of a web developer or a computer
 							vision engineer.
+						</p> -->
+						<p>
+							我的名字是Ryan，我今年
+							<span id="age"></span
+							>岁，我是个大学生，位于亚洲。我会说英文和普通话。
+							我对<b>数据科学</b>和<b>网站建立</b>有强烈的兴趣。
+							我的志愿是成为一位网站程序员或者一位电脑视觉工程师。
 						</p>
 						<p>
-							I am currently in college where I study
-							Computer Science (focused on Data Science)
-							and plan on continuing my studies after
-							college. I stream on
+							我正在学习着电脑科学（关注在数据科学），然后想将来继续留学。
+							我在
 							<a
 								href="https://twitch.tv/RyanPython"
 								target="_blank"
 								class="socials"
 								>Twitch</a
 							>
-							and occasionally post videos to
+							直播，有时候在
 							<a
 								href="https://www.youtube.com/@RyanPython"
 								target="_blank"
 								class="socials"
-								>Youtube</a
-							>. You can also check out my other
-							<a class="socials" href="./socials.html"
-								>socials</a
-							>!
+								>YouTube</a
+							>
+							上载一些视频！
 						</p>
 					</div>
 					<div
 						id="about-second-box"
 						class="mini-content-box second-box"
 					>
-						<h4>Past leadership positions:</h4>
+						<h4>领导职位：</h4>
 						<ul class="about-me-list">
 							<li class="hidden-fade" style="--order: 1">
-								President of Technology Society
+								技术协会 主席会长
 							</li>
 							<li class="hidden-fade" style="--order: 1">
-								Technology Manager of Prefects' Board
+								省长委员会 技术经理
 							</li>
 							<li class="hidden-fade" style="--order: 1">
-								President of Computer Programming Club
+								电脑编程俱乐部 主席会长
 							</li>
 							<li class="hidden-fade" style="--order: 1">
-								Vice President of Diploma Student Union
+								文凭学生会 副主席会长
 							</li>
 						</ul>
-						<h4>Hobbies:</h4>
+						<h4>爱好:</h4>
 						<ul class="about-me-list">
 							<li class="hidden-fade" style="--order: 1">
-								Programming
+								电脑程序
 							</li>
 							<li class="hidden-fade" style="--order: 1">
-								Playing piano + guitar
+								弹吉他+钢琴
 							</li>
 							<li class="hidden-fade" style="--order: 1">
-								Listening to music
+								听音乐
 							</li>
 							<li class="hidden-fade" style="--order: 1">
-								Playing Valorant
+								玩 Valorant
 							</li>
 							<li class="hidden-fade" style="--order: 1">
-								Content creation
+								娱乐创作
 							</li>
 						</ul>
 					</div>
@@ -170,23 +173,19 @@
 			<div id="skills-content" class="content">
 				<div id="skills-box" class="content-box">
 					<div class="mini-content-box">
-						<h2 class="left-align section-title">Skills</h2>
+						<h2 class="left-align section-title">技能</h2>
 						<p>
-							Since I was 14, I had a keen interest in
-							Computer Vision and automation, worked on
-							several projects that involved web scraping,
-							image processing and server-side development.
+							自从我14岁，我对电脑视觉与自动化有兴趣，然后
+							自己实验程序一些有关的项目。
 						</p>
 						<p>
-							I have also have an interest in web
-							development. I began learning node JS to
-							develop Discord bots, then later transition
-							to learning frontend Javascript to develop
-							websites.
+							我也对网站建立有兴趣。我以前学 node JS
+							为了建立一些 Discord bots,
+							然后学会前端的Javascript来建立网站。
 						</p>
 					</div>
 					<div id="showcase" class="mini-content-box">
-						<h4>Languages</h4>
+						<h4>程序语言</h4>
 						<div class="category">
 							<a
 								href="https://en.wikipedia.org/wiki/Python_(programming_language)"
@@ -197,7 +196,7 @@
 								>
 									<img
 										class="item-icon"
-										src="./images/python.png"
+										src="./../images/python.png"
 										alt="Python icon"
 									/>
 									<span class="label">Python</span>
@@ -212,7 +211,7 @@
 									style="--order: 1"
 								>
 									<img
-										src="./images/javascript.png"
+										src="./../images/javascript.png"
 										alt="Javascript icon"
 										class="item-icon"
 									/>
@@ -231,7 +230,7 @@
 								>
 									<img
 										class="item-icon"
-										src="./images/R.png"
+										src="./../images/R.png"
 										alt="R icon"
 									/>
 									<span class="label">R</span>
@@ -247,14 +246,14 @@
 								>
 									<img
 										class="item-icon"
-										src="./images/mysql-logo.png"
+										src="./../images/mysql-logo.png"
 										alt="MySQL icon"
 									/>
 									<span class="label">MySQL</span>
 								</div>
 							</a>
 						</div>
-						<h4>Tools</h4>
+						<h4>工具</h4>
 						<div class="category">
 							<a
 								href="https://en.wikipedia.org/wiki/Git"
@@ -266,7 +265,7 @@
 								>
 									<img
 										class="item-icon"
-										src="./images/git.png"
+										src="./../images/git.png"
 										alt="Git icon"
 									/>
 									<span class="label">Git</span>
@@ -281,7 +280,7 @@
 									style="--order: 2"
 								>
 									<img
-										src="./images/vscode.png"
+										src="./../images/vscode.png"
 										alt="Visual Studio Code icon"
 										class="item-icon"
 									/>
@@ -298,7 +297,7 @@
 								>
 									<img
 										class="item-icon"
-										src="./images/davinci.png"
+										src="./../images/davinci.png"
 										alt="davinci resolve icon"
 									/>
 									<span id="DR-label" class="label"
@@ -316,7 +315,7 @@
 								>
 									<img
 										class="item-icon"
-										src="./images/obs.png"
+										src="./../images/obs.png"
 										alt="OBS icon"
 									/>
 									<span class="label"
@@ -332,13 +331,14 @@
 
 		<section id="Projects">
 			<div id="projects-content" class="content">
-				<h2 class="section-title">Projects</h2>
+				<h2 class="section-title">项目</h2>
 				<button
 					type="button"
 					onclick="videos_unmuted()"
 					id="mute-button"
+					style="padding: 0 20px"
 				>
-					Click to play audio
+					播音
 				</button>
 				<!-- Slideshow container -->
 				<div class="slideshow-container">
@@ -348,15 +348,12 @@
 							muted
 							loop
 							class="project-icon"
-							src="./videos/aim_lab_demo.mov"
-						>
-							Loading...
-						</video>
+							src="./../videos/aim_lab_demo.mov"
+						></video>
 						<div class="description">
-							Aim Lab bot that takes over your mouse to
-							play Aim Lab. Uses <b>OpenCV</b> for screen
-							image processing and <b>win32API</b> for
-							mouse control.
+							Aim Lab bot 接管您的鼠标来玩 Aim Lab。使用
+							OpenCV 进行屏幕图像处理，使用 win32API
+							进行鼠标控制。
 						</div>
 					</div>
 
@@ -365,14 +362,12 @@
 							muted
 							loop
 							class="project-icon"
-							src="./videos/chess_opencv_demo.mov"
+							src="./../videos/chess_opencv_demo.mov"
 						></video>
 						<div class="description">
-							Chess bot that plays the best moves on
-							lichess according to <b>Stockfish</b> engine.
-							Uses <b>OpenCV</b> for screen image
-							processing and <b>PyAutoGUI</b> for mouse
-							control. <br /><a
+							根据Stockfish引擎来在 lichess 国际象棋游戏
+							上发挥最佳动作。使用OpenCV进行屏幕图像处理，使用
+							PyAutoGUI进行鼠标控制。 <br /><a
 								href="https://github.com/liyunze-coding/chess-playing-bot-v2"
 								class="github-repo"
 								target="_blank"
@@ -386,13 +381,13 @@
 							muted
 							loop
 							class="project-icon"
-							src="./videos/chimp_test.mov"
+							src="./../videos/chimp_test.mov"
 						></video>
 						<div class="description">
-							A Chimp Test bot that plays Chimp Test on
-							Human Benchmark with incredible speed. Uses
-							<b>OpenCV</b> for screen image processing and
-							<b>PyAutoGUI</b> for mouse control. <br /><a
+							Chimp Test 机器人，它以惊人的速度在 Human
+							Benchmark 上进行 Chimp
+							Test。使用OpenCV进行屏幕图像处理，使用
+							PyAutoGUI 进行鼠标控制。<br /><a
 								href="https://github.com/liyunze-coding/human-benchmark-bots/tree/master/chimp_test"
 								class="github-repo"
 								target="_blank"
@@ -406,13 +401,13 @@
 							muted
 							loop
 							class="project-icon"
-							src="./videos/visual_memory_clip.mov"
+							src="./../videos/visual_memory_clip.mov"
 						></video>
 						<div class="description">
-							Visual Memory bot that plays Human
-							Benchmark's Visual Memory Test. Uses OpenCV
-							for screen image processing and PyAutoGUI for
-							mouse control.
+							Human Benchmark
+							的视觉记忆测试的视觉记忆机器人。使用 OpenCV
+							进行屏幕图像处理，使用 PyAutoGUI
+							进行鼠标控制。
 							<br /><a
 								href="https://github.com/liyunze-coding/human-benchmark-bots/tree/master/visual_memory"
 								class="github-repo"
@@ -427,14 +422,13 @@
 							muted
 							loop
 							class="project-icon"
-							src="./videos/monkeytype.mov"
+							src="./../videos/monkeytype.mov"
 						></video>
 						<div class="description">
-							A MonkeyType bot that types at a whopping
-							620+ WPM using <b>OpenCV</b> for screen image
-							processing, <b>Tesseract OCR engine</b> to
-							identify words and <b>PyAutoGUI</b> for
-							keyboard control. <br /><a
+							可以高达 620+ WPM 打字的 MonkeyType
+							bot，使用OpenCV进行屏幕图像处理，使用Tesseract
+							OCR 引擎识别单词，使用PyAutoGUI进行键盘控制。
+							<br /><a
 								href="https://github.com/liyunze-coding/monkey-type-bot"
 								class="github-repo"
 								target="_blank"
@@ -474,17 +468,14 @@
 
 		<section id="Contact">
 			<div id="contact-content" class="content">
-				<h2 class="section-title">Contact</h2>
-				<p>
-					Whether it's a job offer or a friendly message, feel
-					free to contact me!
-				</p>
+				<h2 class="section-title">联络</h2>
+				<p>无论是工作机会还是友好的信息，请随时联系我！</p>
 				<div class="console-container">
-					Hope you have a<span id="day-adjective"></span
-					><span class="console-underscore" id="console"
-						>⎸
-					</span>
-					<span id="today"></span>
+					希望你的星期<span id="today"></span>过得很<span
+						id="day-adjective"
+					></span
+					><span class="console-underscore" id="console">⎸ </span
+					>。
 				</div>
 				<div class="container">
 					<form
@@ -550,7 +541,7 @@
 		</section>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-		<script src="scripts/app.js"></script>
-		<script src="scripts/animations.js"></script>
+		<script src="./scripts/app.js"></script>
+		<script src="./../scripts/animations.js"></script>
 	</body>
 </html>
