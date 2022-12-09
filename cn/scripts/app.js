@@ -16,12 +16,12 @@ $(window).on("load", async function () {
 
     consoleText(
         [
-            "精彩",
-            "美好",
-            "晴朗",
-            "奇妙",
-            "极好",
-            "美妙"
+            "非常好",
+            "还不错",
+            "蛮晴朗的",
+            "特别好",
+            "挺良好的",
+            "极好的"
         ],
         "day-adjective"
     );
@@ -114,7 +114,7 @@ function consoleText(words, id) {
                 );
                 letterCount += x;
                 waiting = false;
-            }, 800);
+            }, 1000);
         } else if (
             letterCount === words[0].length + 1 &&
             waiting === false
@@ -132,7 +132,7 @@ function consoleText(words, id) {
             );
             letterCount += x;
         }
-    }, 700);
+    }, 200);
     window.setInterval(function () {
         if (visible === true) {
             con.className = "console-underscore hidden";
