@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@200;400;700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
 
 :root {
 	--height-of-section: 100vh;
@@ -8,7 +9,7 @@
 body {
 	background-color:#131316;
 	color:#ffffff;
-	font-family:'Poppins',sans-serif;
+	font-family:'Noto Sans SC','Poppins',sans-serif;
 	padding:0;
 	margin:0;
 
@@ -325,7 +326,7 @@ a.socials {
 
 #mute-button {
 	width:fit-content;
-	padding:2px;
+	padding:2px 10px;
 	border-radius:5px;
 	align-self: center;
 	margin-bottom:10px;

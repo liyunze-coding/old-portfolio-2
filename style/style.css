@@ -325,7 +325,7 @@ a.socials {
 
 #mute-button {
 	width:fit-content;
-	padding:2px;
+	padding:2px 10px;
 	border-radius:5px;
 	align-self: center;
 	margin-bottom:10px;
