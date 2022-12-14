@@ -124,7 +124,7 @@ function consoleText(words, id) {
                 x = -1;
                 letterCount += x;
                 waiting = false;
-            }, 2000);
+            }, 3000);
         } else if (waiting === false) {
             target.innerHTML = words[0].substring(
                 0,
@@ -132,7 +132,7 @@ function consoleText(words, id) {
             );
             letterCount += x;
         }
-    }, 200);
+    }, 400);
     window.setInterval(function () {
         if (visible === true) {
             con.className = "console-underscore hidden";

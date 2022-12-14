@@ -9,7 +9,7 @@
 body {
 	background-color:#131316;
 	color:#ffffff;
-	font-family:'Noto Sans SC','Poppins',sans-serif;
+	font-family:'Noto Sans SC','Montserrat',sans-serif;
 	padding:0;
 	margin:0;
 
@@ -58,6 +58,16 @@ section {
 
 	/* border:solid 1px #131316; */
 }
+
+#python-icon { --order: 0 }
+#js-icon { --order: 1 }
+#r-icon { --order: 2 }
+#mysql-icon { --order: 3 }
+
+#git-icon { --order: 1 }
+#vscode-icon { --order: 2 }
+#davinci-icon { --order: 3 }
+#obs-icon { --order: 4 }
 
 .hidden-slide {
 	opacity:0;
@@ -190,6 +200,7 @@ a.socials {
 	text-align: center;
 	color:#fafafa;
 
+	font-family:'Montserrat', sans-serif;
 	font-size:0.8em; 
 
 	line-height:normal;
@@ -471,4 +482,14 @@ input {
 		grid-template-columns: 1fr 1fr;
 		gap:25px;
 	}
+
+	#python-icon { --order: 1 }
+	#js-icon { --order: 2 }
+	#r-icon { --order: 1 }
+	#mysql-icon { --order: 2 }
+
+	#git-icon { --order: 1 }
+	#vscode-icon { --order: 2 }
+	#davinci-icon { --order: 1 }
+	#obs-icon { --order: 2 }
 }
