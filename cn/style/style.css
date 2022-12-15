@@ -371,6 +371,12 @@ a.socials {
 	color: #ccc;
 	font-family: "montserrat", sans-serif;
 	position:relative;
+	padding:0;
+	margin:0;
+}
+
+input[type="text"]:focus, textarea:focus{
+	outline:none;
 }
 
 input[type="text"],
@@ -378,8 +384,8 @@ select,
 textarea {
 	width: 100%;
 	padding: 12px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
+	border: 2px solid #ccc;
+	border-radius: 10px;
 	box-sizing: border-box;
 	margin-top: 6px;
 	margin-bottom: 16px;
