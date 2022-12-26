@@ -267,7 +267,8 @@ a.socials {
   
   /* Hide the images by default */
 .mySlides {
-	display: none;
+	display: block;
+	opacity: 1;
 }
 
 .mySlides video {
@@ -281,10 +282,6 @@ a.socials {
 
 	border-radius:20px;
 	border:solid 2px white;
-}
-
-.hidden {
-	opacity:0;
 }
   
   /* Next & previous buttons */

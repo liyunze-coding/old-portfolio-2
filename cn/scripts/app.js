@@ -27,7 +27,7 @@ $(window).on("load", async function () {
     );
 });
 
-let slideIndex = 1;
+let slideIndex = 0;
 showSlides(slideIndex);
 
 // Next/previous controls
@@ -41,25 +41,83 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
+    const video_description = [
+        [
+            'aim_lab_demo.mov', 
+            `Aim Lab bot 接管您的鼠标来玩 Aim Lab。使用
+            OpenCV 进行屏幕图像处理，使用 win32API
+            进行鼠标控制。`
+        ], 
+        [
+            'chess_opencv_demo.mov',
+            `根据Stockfish引擎来在 lichess 国际象棋游戏
+            上发挥最佳动作。使用OpenCV进行屏幕图像处理，使用
+            PyAutoGUI进行鼠标控制。 <br /><a
+                href="https://github.com/liyunze-coding/chess-playing-bot-v2"
+                class="github-repo"
+                target="_blank"
+                >Github</a
+            >`
+        ], 
+        [
+            'chimp_test.mov',
+            `Chimp Test 机器人，它以惊人的速度在 Human
+            Benchmark 上完成 Chimp
+            Test。使用OpenCV进行屏幕图像处理，使用
+            PyAutoGUI 进行鼠标控制。<br /><a
+                href="https://github.com/liyunze-coding/human-benchmark-bots/tree/master/chimp_test"
+                class="github-repo"
+                target="_blank"
+                >Github</a
+            >`
+        ], 
+        [
+            'visual_memory_clip.mov',
+            `Human Benchmark 的 Visual Memory Test
+            的视觉记忆机器人。使用 OpenCV
+            进行屏幕图像处理，使用 PyAutoGUI
+            进行鼠标控制。
+            <br /><a
+                href="https://github.com/liyunze-coding/human-benchmark-bots/tree/master/visual_memory"
+                class="github-repo"
+                target="_blank"
+                >Github</a
+            >`
+        ],
+        [
+            'monkeytype.mov',
+            `高达 620+ WPM 打字的 MonkeyType
+            机器人，使用OpenCV进行屏幕图像处理，使用Tesseract
+            OCR 引擎识别单词，使用PyAutoGUI进行键盘控制。
+            <br /><a
+                href="https://github.com/liyunze-coding/monkey-type-bot"
+                class="github-repo"
+                target="_blank"
+                >Github</a
+            >`
+        ]
+        
+    ];
 	let i;
-	let slides = document.getElementsByClassName("mySlides");
 	let dots = document.getElementsByClassName("dot");
-    let videos = document.getElementsByClassName("project-icon");
-	if (n > slides.length) {slideIndex = 1}
-	if (n < 1) {slideIndex = slides.length}
-	for (i = 0; i < slides.length; i++) {
-		slides[i].style.display = "none";
-        videos[i].autoplay = false;
-        videos[i].load();
-	}
+
+	if (n > video_description.length-1) {slideIndex = 0}
+	if (n < 0) {slideIndex = video_description.length-1}
+
+    let video = video_description[slideIndex][0];
+    let description = video_description[slideIndex][1];
+    
+    let video_elem = document.getElementById('project-icon');
+    document.getElementById('video-source').setAttribute('src', `./../videos/${video}`);
+
+    video_elem.load();
+    document.getElementById('project-description').innerHTML = description;
+
 	for (i = 0; i < dots.length; i++) {
 		dots[i].className = dots[i].className.replace(" active", "");
 	}
-	slides[slideIndex-1].style.display = "block";
-    slides[slideIndex-1].style.opacity = "1";
-    videos[slideIndex-1].autoplay = true;
     
-	dots[slideIndex-1].className += " active";
+	dots[slideIndex].className += " active";
 }
 
 document.querySelectorAll('.project-icon').forEach((video) => {

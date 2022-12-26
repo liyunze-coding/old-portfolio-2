@@ -29,7 +29,7 @@ $(window).on("load", async function () {
     );
 });
 
-let slideIndex = 1;
+let slideIndex = 0;
 showSlides(slideIndex);
 
 // Next/previous controls
@@ -42,26 +42,89 @@ function currentSlide(n) {
   	showSlides(slideIndex = n);
 }
 
+
+
 function showSlides(n) {
+    const video_description = [
+        [
+            'aim_lab_demo.mov', 
+            `Aim Lab bot that takes over your mouse to
+            play Aim Lab. Uses <b>OpenCV</b> for screen
+            image processing and <b>win32API</b> for
+            mouse control.`
+        ], 
+        [
+            'chess_opencv_demo.mov',
+            `Chess bot that plays the best moves on
+            lichess according to <b>Stockfish</b> engine.
+            Uses <b>OpenCV</b> for screen image
+            processing and <b>PyAutoGUI</b> for mouse
+            control. <br /><a
+                href="https://github.com/liyunze-coding/chess-playing-bot-v2"
+                class="github-repo"
+                target="_blank"
+                >Github</a
+            >`
+        ], 
+        [
+            'chimp_test.mov',
+            `A Chimp Test bot that plays Chimp Test on
+            Human Benchmark with incredible speed. Uses
+            <b>OpenCV</b> for screen image processing and
+            <b>PyAutoGUI</b> for mouse control. <br /><a
+                href="https://github.com/liyunze-coding/human-benchmark-bots/tree/master/chimp_test"
+                class="github-repo"
+                target="_blank"
+                >Github</a
+            >`
+        ], 
+        [
+            'visual_memory_clip.mov',
+            `Visual Memory bot that plays Human
+            Benchmark's Visual Memory Test. Uses OpenCV
+            for screen image processing and PyAutoGUI for
+            mouse control.
+            <br /><a
+                href="https://github.com/liyunze-coding/human-benchmark-bots/tree/master/visual_memory"
+                class="github-repo"
+                target="_blank"
+                >Github</a
+            >`
+        ], 
+        [
+            'monkeytype.mov',
+            `A MonkeyType bot that types at a whopping
+            620+ WPM using <b>OpenCV</b> for screen image
+            processing, <b>Tesseract OCR engine</b> to
+            identify words and <b>PyAutoGUI</b> for
+            keyboard control. <br /><a
+                href="https://github.com/liyunze-coding/monkey-type-bot"
+                class="github-repo"
+                target="_blank"
+                >Github</a
+            >`
+        ]
+    ];
 	let i;
-	let slides = document.getElementsByClassName("mySlides");
 	let dots = document.getElementsByClassName("dot");
-    let videos = document.getElementsByClassName("project-icon");
-	if (n > slides.length) {slideIndex = 1}
-	if (n < 1) {slideIndex = slides.length}
-	for (i = 0; i < slides.length; i++) {
-		slides[i].style.display = "none";
-        videos[i].autoplay = false;
-        videos[i].load();
-	}
+
+	if (n > video_description.length-1) {slideIndex = 0}
+	if (n < 0) {slideIndex = video_description.length-1}
+
+    let video = video_description[slideIndex][0];
+    let description = video_description[slideIndex][1];
+    
+    let video_elem = document.getElementById('project-icon');
+    document.getElementById('video-source').setAttribute('src', `./videos/${video}`);
+
+    video_elem.load();
+    document.getElementById('project-description').innerHTML = description;
+
 	for (i = 0; i < dots.length; i++) {
 		dots[i].className = dots[i].className.replace(" active", "");
 	}
-	slides[slideIndex-1].style.display = "block";
-    slides[slideIndex-1].style.opacity = "1";
-    videos[slideIndex-1].autoplay = true;
     
-	dots[slideIndex-1].className += " active";
+	dots[slideIndex].className += " active";
 }
 
 document.querySelectorAll('.project-icon').forEach((video) => {
