@@ -26,8 +26,9 @@
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#Home"
 					><img
-						style="height: 35px; padding: 0; margin: 0"
+						class="nav-img"
 						src="./../images/logo.jpg"
+						alt="navbar icon"
 				/></a>
 
 				<button
@@ -90,7 +91,11 @@
 				<h2 class="section-title">关于</h2>
 				<div id="about-box" class="content-box">
 					<div class="mini-content-box">
-						<img src="./../images/pfp.png" class="pfp" />
+						<img
+							src="./../images/pfp.png"
+							class="pfp"
+							alt="Ryan 帅气的照片"
+						/>
 
 						<p>
 							我的名字是Ryan，我今年
@@ -344,8 +349,12 @@
 							autoplay
 							id="project-icon"
 							class="project-icon"
+							alt="展示项目的影片"
 						>
-							<source id="video-source" />
+							<source
+								id="video-source"
+								src="./../videos/aim_lab_demo.mov"
+							/>
 						</video>
 						<div
 							id="project-description"
@@ -356,85 +365,6 @@
 						&#10095;
 					</div>
 
-					<!-- <div class="mySlides fade">
-						<video
-							muted
-							loop
-							class="project-icon"
-							src="./../videos/chess_opencv_demo.mov"
-						></video>
-						<div class="description">
-							根据Stockfish引擎来在 lichess 国际象棋游戏
-							上发挥最佳动作。使用OpenCV进行屏幕图像处理，使用
-							PyAutoGUI进行鼠标控制。 <br /><a
-								href="https://github.com/liyunze-coding/chess-playing-bot-v2"
-								class="github-repo"
-								target="_blank"
-								>Github</a
-							>
-						</div>
-					</div>
-
-					<div class="mySlides fade">
-						<video
-							muted
-							loop
-							class="project-icon"
-							src="./../videos/chimp_test.mov"
-						></video>
-						<div class="description">
-							Chimp Test 机器人，它以惊人的速度在 Human
-							Benchmark 上完成 Chimp
-							Test。使用OpenCV进行屏幕图像处理，使用
-							PyAutoGUI 进行鼠标控制。<br /><a
-								href="https://github.com/liyunze-coding/human-benchmark-bots/tree/master/chimp_test"
-								class="github-repo"
-								target="_blank"
-								>Github</a
-							>
-						</div>
-					</div>
-
-					<div class="mySlides fade">
-						<video
-							muted
-							loop
-							class="project-icon"
-							src="./../videos/visual_memory_clip.mov"
-						></video>
-						<div class="description">
-							Human Benchmark 的 Visual Memory Test
-							的视觉记忆机器人。使用 OpenCV
-							进行屏幕图像处理，使用 PyAutoGUI
-							进行鼠标控制。
-							<br /><a
-								href="https://github.com/liyunze-coding/human-benchmark-bots/tree/master/visual_memory"
-								class="github-repo"
-								target="_blank"
-								>Github</a
-							>
-						</div>
-					</div>
-
-					<div class="mySlides fade">
-						<video
-							muted
-							loop
-							class="project-icon"
-							src="./../videos/monkeytype.mov"
-						></video>
-						<div class="description">
-							高达 620+ WPM 打字的 MonkeyType
-							机器人，使用OpenCV进行屏幕图像处理，使用Tesseract
-							OCR 引擎识别单词，使用PyAutoGUI进行键盘控制。
-							<br /><a
-								href="https://github.com/liyunze-coding/monkey-type-bot"
-								class="github-repo"
-								target="_blank"
-								>Github</a
-							>
-						</div>
-					</div> -->
 					<div id="dots">
 						<span
 							class="dot"

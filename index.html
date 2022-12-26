@@ -7,6 +7,15 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0"
 		/>
+		<meta
+			name="description"
+			content="Check out Ryan's Software Developer Portfolio and learn more about his skills and experience"
+		/>
+		<meta name="author" content="Ryan" />
+		<meta
+			name="keywords"
+			content="Ryan, Python, Javascript, Web development, Web Developer, Data Science, OpenCV, Computer Vision, Developer"
+		/>
 
 		<link rel="shortcut icon" type="image/jpg" href="images/logo.jpg" />
 
@@ -22,8 +31,9 @@
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#Home"
 					><img
-						style="height: 35px; padding: 0; margin: 0"
+						class="nav-img"
 						src="./images/logo.jpg"
+						alt="navbar icon"
 				/></a>
 
 				<button
@@ -90,7 +100,11 @@
 				<h2 class="section-title">About</h2>
 				<div id="about-box" class="content-box">
 					<div class="mini-content-box">
-						<img src="./images/pfp.png" class="pfp" />
+						<img
+							src="./images/pfp.png"
+							class="pfp"
+							alt="a handsome picture of Ryan"
+						/>
 						<p>
 							My name is Ryan, I am
 							<span id="age"></span> years old and I am a
@@ -354,8 +368,12 @@
 							autoplay
 							id="project-icon"
 							class="project-icon"
+							alt="A video displaying the project"
 						>
-							<source id="video-source" />
+							<source
+								id="video-source"
+								src="./videos/aim_lab_demo.mov"
+							/>
 						</video>
 						<div
 							id="project-description"
