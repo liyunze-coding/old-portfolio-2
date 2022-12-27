@@ -417,6 +417,10 @@ input {
 	color:white;
 }
 
+.hidden {
+	opacity: 0;
+}
+
 .console-container {
 	font-size:1.2em;
 	font-family:'Montserrat', sans-serif;

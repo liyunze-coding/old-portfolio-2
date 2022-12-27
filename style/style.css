@@ -371,6 +371,10 @@ a.socials {
 
 /* contact stuff */
 
+.hidden {
+	opacity: 0;
+}
+
 .container {
 	color: #ccc;
 	font-family: "montserrat", sans-serif;
