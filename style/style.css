@@ -66,8 +66,9 @@ section {
 
 #python-icon { --order: 0 }
 #js-icon { --order: 1 }
-#r-icon { --order: 2 }
-#mysql-icon { --order: 3 }
+#typescript-icon { --order: 2 }
+#r-icon { --order: 3 }
+
 
 #git-icon { --order: 1 }
 #vscode-icon { --order: 2 }
@@ -500,8 +501,8 @@ input {
 
 	#python-icon { --order: 1 }
 	#js-icon { --order: 2 }
-	#r-icon { --order: 1 }
-	#mysql-icon { --order: 2 }
+	#typescript-icon { --order: 1 }
+	#r-icon { --order: 2 }
 
 	#git-icon { --order: 1 }
 	#vscode-icon { --order: 2 }
