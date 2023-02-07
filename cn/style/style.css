@@ -65,24 +65,22 @@ section {
 	/* border:solid 1px #131316; */
 }
 
-#python-icon { --order: 0 }
-#js-icon { --order: 1 }
+#python-icon { --order: 1 }
+#js-icon { --order: 1.5 }
 #typescript-icon { --order: 2 }
-#r-icon { --order: 3 }
+#r-icon { --order: 2.5 }
 
 
-#git-icon { --order: 1 }
-#vscode-icon { --order: 2 }
+#git-icon { --order: 2 }
+#vscode-icon { --order: 2.5 }
 #davinci-icon { --order: 3 }
-#obs-icon { --order: 4 }
+#obs-icon { --order: 3.5 }
 
 .hidden-slide {
 	opacity:0;
 	filter:blur(5px);
 	transform:translateX(-100%);
-	transition: all 800ms;
-
-	transition-delay: calc(var(--order) * 100ms);
+	transition: transform calc(var(--order, 1) * 800ms), filter calc(var(--order, 1) * 800ms), opacity calc(var(--order, 1) * 800ms) ease-in-out;
 }
 
 .section-title {
@@ -94,8 +92,8 @@ section {
 .hidden-fade {
 	opacity:0;
 	filter:blur(5px);
-	transition:all 1s;
-	transition-delay: calc(var(--order) * 100ms);
+	/* transition:all 1s; */
+	transition: filter calc(var(--order, 1) * 800ms), opacity calc(var(--order, 1) * 800ms) ease-in-out;
 }
 
 .show-slide {
@@ -241,12 +239,20 @@ a.socials {
 }
 
 .item:hover {
-	transform:translateY(-2%);
-	-webkit-transition:all 0.4s ease;
-       -moz-transition:all 0.4s ease;
-        -ms-transition:all 0.4s ease;
-         -o-transition:all 0.4s ease;
-            transition:all 0.4s ease;
+	transform:translateY(-5%);
+	-webkit-transition:transform 0.4s ease, box-shadow 0.4s ease;
+       -moz-transition:transform 0.4s ease, box-shadow 0.4s ease;
+        -ms-transition:transform 0.4s ease, box-shadow 0.4s ease;
+         -o-transition:transform 0.4s ease, box-shadow 0.4s ease;
+            transition:transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.item:not(:hover){
+	-webkit-transition:transform 0.4s ease, opacity 800ms, filter 800ms, box-shadow 0.4s ease;
+       -moz-transition:transform 0.4s ease, opacity 800ms, filter 800ms, box-shadow 0.4s ease;
+        -ms-transition:transform 0.4s ease, opacity 800ms, filter 800ms, box-shadow 0.4s ease;
+         -o-transition:transform 0.4s ease, opacity 800ms, filter 800ms, box-shadow 0.4s ease;
+            transition:transform 0.4s ease, opacity 800ms, filter 800ms, box-shadow 0.4s ease;
 }
 
 .cyan:hover {

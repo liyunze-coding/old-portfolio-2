@@ -25,7 +25,7 @@
 
 &nbsp;&nbsp;I mainly program in Python
 
-<img align="left" alt="Portfolio" height="20px" src="images\logo.jpg"/>&nbsp;&nbsp;I made [this](https://liyunze-coding.github.io/portfolio) portfolio website from scratch
+<img align="left" alt="Portfolio" height="20px" src="images\logo.jpg"/>&nbsp;&nbsp;I made [this](https://liyunze-coding.github.io/) portfolio website from scratch
 
 ---
 
