@@ -412,32 +412,40 @@
 					<form
 						action="https://formspree.io/f/xgerwrwj"
 						method="POST"
+						id="contact-form"
 					>
-						<label for="name"
-							>Name<span style="color: red">*</span></label
-						>
-						<span class="name status"></span>
-						<input
-							required
-							type="text"
-							name="name"
-							class="name-input"
-							placeholder="Name"
-						/>
-
-						<label for="email"
-							>Email<span style="color: red"
-								>*</span
-							></label
-						>
-						<span class="email status"></span>
-						<input
-							required
-							type="text"
-							name="email"
-							class="email-input"
-							placeholder="example@gmail.com"
-						/>
+						<div id="name-email">
+							<div id="name" class="form-content">
+								<label for="name"
+									>Name<span style="color: red"
+										>*</span
+									></label
+								>
+								<span class="name status"></span>
+								<input
+									required
+									type="text"
+									name="name"
+									class="name-input"
+									placeholder="Name"
+								/>
+							</div>
+							<div id="email" class="form-content">
+								<label for="email"
+									>Email<span style="color: red"
+										>*</span
+									></label
+								>
+								<span class="email status"></span>
+								<input
+									required
+									type="text"
+									name="email"
+									class="email-input"
+									placeholder="example@gmail.com"
+								/>
+							</div>
+						</div>
 
 						<label for="subject">Subject</label>
 						<input
@@ -461,11 +469,7 @@
 							placeholder="Write something..."
 						></textarea>
 
-						<input
-							type="submit"
-							value="Submit"
-							class="submit"
-						/>
+						<input type="submit" value="Submit" id="submit" />
 					</form>
 				</div>
 				<br />

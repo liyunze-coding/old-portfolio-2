@@ -25,7 +25,7 @@ section {
 	border-top:solid 1px #131316;
 
 	height:calc(var(--height-of-section) - var(--height-of-nav));
-	min-height: 100vh;
+	min-height: fit-content;
 }
 
 #Home .content {
@@ -64,11 +64,6 @@ section {
 	/* border:solid 1px #131316; */
 }
 
-#python-icon { --order: 1 }
-#js-icon { --order: 1.5 }
-#typescript-icon { --order: 2 }
-#r-icon { --order: 2.5 }
-
 
 #git-icon { --order: 2 }
 #vscode-icon { --order: 2.5 }
@@ -80,11 +75,11 @@ section {
 	filter:blur(5px);
 	transform:translateX(-100%);
 
-	-webkit-transition:transform calc(var(--order, 1) * 800ms), opacity calc(var(--order, 1) * 800ms), filter calc(var(--order, 1) * 800ms);
-       -moz-transition:transform calc(var(--order, 1) * 800ms), opacity calc(var(--order, 1) * 800ms), filter calc(var(--order, 1) * 800ms);
-        -ms-transition:transform calc(var(--order, 1) * 800ms), opacity calc(var(--order, 1) * 800ms), filter calc(var(--order, 1) * 800ms);
-         -o-transition:transform calc(var(--order, 1) * 800ms), opacity calc(var(--order, 1) * 800ms), filter calc(var(--order, 1) * 800ms);
-            transition:transform calc(var(--order, 1) * 800ms), opacity calc(var(--order, 1) * 800ms), filter calc(var(--order, 1) * 800ms);
+	-webkit-transition:all 800ms;
+       -moz-transition:all 800ms;
+        -ms-transition:all 800ms;
+         -o-transition:all 800ms;
+            transition:all 800ms;
 }
 
 .section-title {
@@ -97,11 +92,11 @@ section {
 	opacity:0;
 	filter:blur(5px);
 	
-	-webkit-transition:opacity calc(var(--order, 1) * 800ms), filter calc(var(--order, 1) * 800ms);
-       -moz-transition:opacity calc(var(--order, 1) * 800ms), filter calc(var(--order, 1) * 800ms);
-        -ms-transition:opacity calc(var(--order, 1) * 800ms), filter calc(var(--order, 1) * 800ms);
-         -o-transition:opacity calc(var(--order, 1) * 800ms), filter calc(var(--order, 1) * 800ms);
-            transition:opacity calc(var(--order, 1) * 800ms), filter calc(var(--order, 1) * 800ms);
+	-webkit-transition:all 800ms;
+       -moz-transition:all 800ms;
+        -ms-transition:all 800ms;
+         -o-transition:all 800ms;
+            transition:all 800ms;
 }
 
 .show-slide {
@@ -363,6 +358,11 @@ a.socials {
 	margin-bottom:10px;
 }
 
+.github-repo, .github-repo:hover {
+	text-decoration:underline;
+	color:white;
+}
+
 /* The dots/bullets/indicators */
 #dots {
 	text-align: center;
@@ -387,56 +387,64 @@ a.socials {
 
 /* contact stuff */
 
+#Contact {
+	margin:0;
+}
+
 .hidden {
 	opacity: 0;
 }
 
-.container {
-	color: #ccc;
-	font-family: "montserrat", sans-serif;
-	position:relative;
-
+#contact-content .container {
 	margin:0;
 	padding:0;
 }
 
-input[type="text"]:focus, textarea:focus{
+#contact-form{
+	width:clamp(370px, 80%, 900px);
+	display:flex;
+	flex-direction:column;
+	margin:0;
+}
+
+#contact-form textarea, #contact-form input{
+	background-color:#202020;
+	color:#fafafa;
+	border:solid 2px #202020;
+	padding:5px;
+
+	margin-bottom:10px;
+
+	transition:all 400ms;
+}
+
+#contact-form textarea{
+	resize:none;
+	height:140px;
+}
+
+#contact-form textarea:focus, #contact-form input:focus{
 	outline:none;
+	border-bottom:solid 2px cyan;
 }
 
-input[type="text"],
-select,
-textarea {
-	width: 100%;
-	padding: 12px;
-	border: 2px solid #ccc;
-	border-radius: 10px;
-	box-sizing: border-box;
-	margin-top: 6px;
-	margin-bottom: 16px;
-	resize: vertical;
-	background-color: #202020;
-	color: #fafafa;
+#contact-form #name-email {
+	display:flex;
+	flex-direction:row;
 }
 
-input[type="submit"] {
-	background-color: #4caf50;
-	padding: 12px 20px;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
+#contact-form #name-email .form-content {
+	display:flex;
+	flex-direction:column;
+	width:48%
 }
 
-input[type="submit"]:hover {
-	background-color: #45a049;
+#contact-form #name-email #name {
+	margin-right:4%;
 }
 
-input {
-	font-family: "montserrat", sans-serif;
-}
-
-.submit {
-	color:white;
+#contact-form #submit {
+	background: rgb(0, 151, 0);
 }
 
 .console-container {
@@ -445,10 +453,7 @@ input {
 	margin-bottom:10px;
 }
 
-.github-repo, .github-repo:hover {
-	text-decoration:underline;
-	color:white;
-}
+
 
 
 
@@ -513,14 +518,4 @@ input {
 		grid-template-columns: 1fr 1fr;
 		gap:25px;
 	}
-
-	#python-icon { --order: 1 }
-	#js-icon { --order: 2 }
-	#typescript-icon { --order: 1 }
-	#r-icon { --order: 2 }
-
-	#git-icon { --order: 1 }
-	#vscode-icon { --order: 2 }
-	#davinci-icon { --order: 1 }
-	#obs-icon { --order: 2 }
 }
