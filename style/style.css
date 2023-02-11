@@ -387,10 +387,6 @@ a.socials {
 
 /* contact stuff */
 
-#Contact {
-	margin:0;
-}
-
 .hidden {
 	opacity: 0;
 }
@@ -401,7 +397,7 @@ a.socials {
 }
 
 #contact-form{
-	width:clamp(370px, 80%, 900px);
+	width:clamp(350px, 80%, 900px);
 	display:flex;
 	flex-direction:column;
 	margin:0;
@@ -423,7 +419,7 @@ a.socials {
 	height:140px;
 }
 
-#contact-form textarea:focus, #contact-form input:focus{
+#contact-form textarea:focus, #contact-form input:not(#submit):focus{
 	outline:none;
 	border-bottom:solid 2px cyan;
 }
@@ -445,6 +441,11 @@ a.socials {
 
 #contact-form #submit {
 	background: rgb(0, 151, 0);
+	color:#fafafa;
+}
+
+#contact-form #submit:hover {
+	background: rgb(0, 255, 0);
 }
 
 .console-container {
@@ -501,6 +502,15 @@ a.socials {
 
 	.section-title {
 		font-size:2em;
+	}
+
+	#contact-form #name-email {
+		display:flex;
+		flex-direction:column;
+	}
+
+	#contact-form #name-email .form-content {
+		width:100%;
 	}
 }
 

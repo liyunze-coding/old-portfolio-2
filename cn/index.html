@@ -386,10 +386,9 @@
 				</div>
 			</div>
 		</section>
-
 		<section id="Contact">
 			<div id="contact-content" class="content">
-				<h2 class="section-title">联络</h2>
+				<h2 class="section-title">Contact</h2>
 				<p>无论是工作机会还是友好的信息，请随时联系我！</p>
 				<div class="console-container">
 					希望您的星期<span id="today"></span>过得<span
@@ -402,41 +401,51 @@
 					<form
 						action="https://formspree.io/f/xgerwrwj"
 						method="POST"
+						id="contact-form"
 					>
-						<label for="name"
-							>名字<span style="color: red">*</span></label
-						>
-						<span class="name status"></span>
-						<input
-							required
-							type="text"
-							name="name"
-							class="name-input"
-							placeholder="名字"
-						/>
-
-						<label for="email"
-							>电邮<span style="color: red">*</span></label
-						>
-						<span class="email status"></span>
-						<input
-							required
-							type="text"
-							name="email"
-							class="email-input"
-							placeholder="example@gmail.com"
-						/>
+						<div id="name-email">
+							<div id="name" class="form-content">
+								<label for="name"
+									>名字<span style="color: red"
+										>*</span
+									></label
+								>
+								<span class="name status"></span>
+								<input
+									required
+									type="text"
+									name="name"
+									class="name-input"
+									placeholder="Name"
+								/>
+							</div>
+							<div id="email" class="form-content">
+								<label for="email"
+									>电邮<span style="color: red"
+										>*</span
+									></label
+								>
+								<span class="email status"></span>
+								<input
+									required
+									type="text"
+									name="email"
+									class="email-input"
+									placeholder="example@gmail.com"
+								/>
+							</div>
+						</div>
 
 						<label for="subject">话题</label>
 						<input
 							type="text"
 							name="subject"
 							class="subject-input"
-							placeholder="找个话题谈谈"
+							placeholder="Subject"
 						/>
 
 						<label for="Message"
-							>信息<span style="color: red">*</span></label
+							>讯息<span style="color: red">*</span></label
 						>
 						<span class="message status"></span>
 						<textarea
@@ -444,14 +453,10 @@
 							id="message"
 							name="message"
 							class="message-input"
-							placeholder="写些东西。。。"
+							placeholder="Write something..."
 						></textarea>
 
-						<input
-							type="submit"
-							value="Submit"
-							class="submit"
-						/>
+						<input type="submit" value="Submit" id="submit" />
 					</form>
 				</div>
 				<br />
