@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@200;400;700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@200;400;700&family=Roboto:wght@400;700&family=Roboto+Mono&display=swap');
 
 :root {
 	--height-of-section: 100vh;
@@ -49,11 +49,6 @@ section {
 	margin: 0;
 }
 
-#lang a {
-	text-decoration:none;
-	color:rgb(56, 205, 255);
-}
-
 .content {
 	width:75%;
 	height: calc(var(--height-of-section) - var(--height-of-nav));
@@ -64,6 +59,24 @@ section {
 	/* border:solid 1px #131316; */
 }
 
+#intro-message-div {
+	font-family:"Roboto Mono", monospace;
+}
+
+#brute-force-animation {
+    font-weight:bold;
+}
+
+.not-hacking {
+	background-color:none;
+	color:#fff;
+	transition: all 1s ease;
+}
+
+.hacking {
+	background-color:#fff;
+	color:#131316;
+}
 
 #git-icon { --order: 2 }
 #vscode-icon { --order: 2.5 }
@@ -277,7 +290,6 @@ a.socials {
 .slideshow-container {
 	max-width: 1000px;
 	position: relative;
-	/* margin: auto; */
 	margin-left:auto;
 	margin-right:auto;
 }
@@ -397,7 +409,7 @@ a.socials {
 }
 
 #contact-form{
-	width:clamp(350px, 80%, 900px);
+	width:clamp(350px, 100%, 900px);
 	display:flex;
 	flex-direction:column;
 	margin:0;
@@ -514,18 +526,14 @@ a.socials {
 	}
 }
 
-@media screen and (max-width:580px) {
+@media screen and (max-width:540px) {
 	.category {
-		display: inline-grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		gap:25px;
-	}
-}
-
-@media screen and (max-width:450px) {
-	.category {
-		display: inline-grid;
+		display: grid;
+		width:fit-content;
 		grid-template-columns: 1fr 1fr;
 		gap:25px;
+
+		margin-left:auto;
+		margin-right:auto;
 	}
 }

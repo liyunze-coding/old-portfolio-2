@@ -1,3 +1,6 @@
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const cyclingText = ["student", "streamer", "developer", "YouTuber", "programmer"];
+
 $(window).on("load", async function () {
     let date = new Date();
     let weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
@@ -27,6 +30,49 @@ $(window).on("load", async function () {
         ],
         "day-adjective"
     );
+
+    let titleCount = 0;
+    const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+    setInterval( () => {
+        let currentText = document.querySelector('#brute-force-animation');
+        
+        currentText.dataset.value = cyclingText[titleCount];
+        titleCount++;
+
+        if (titleCount >= cyclingText.length) titleCount = 0;
+
+        let iterations = 0;
+
+        let interval = setInterval( async () => {
+            let currentText = document.querySelector('#brute-force-animation');
+            currentText.classList.add("hacking");
+
+            await sleep(1000);
+        
+            currentText.innerText = currentText.dataset.value.split("")
+                .map((letter,index) => {
+                    if (index < iterations) {
+                        return currentText.dataset.value[index];
+                    }
+                
+                    return letters[Math.floor(Math.random() * 26)];
+                })
+                .join("");
+            
+            if (iterations >= currentText.dataset.value.length){
+                clearInterval(interval);
+                // await sleep(1000);
+                currentText.classList.remove("hacking");
+            }
+
+            
+            
+            
+            iterations += 1/3;
+        }, 40);
+        
+    }, 5000);
 });
 
 let slideIndex = 0;
@@ -65,7 +111,17 @@ function showSlides(n) {
                 target="_blank"
                 >Github</a
             >`
-        ], 
+        ],
+        [
+            'home_demo.mov',
+            `Inertia - A webpage inspired by Momentum, providing a personal dashboard featuring to-do lists, weather, and inspirational quotes.
+            <br /><a
+                href="https://liyunze-coding.github.io/home/"
+                class="github-repo"
+                target="_blank"
+                >Demo</a
+            >`
+        ],
         [
             'chimp_test.mov',
             `A Chimp Test bot that plays Chimp Test on
