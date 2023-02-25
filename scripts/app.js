@@ -25,7 +25,7 @@ const video_description = [
         'home_demo.mov',
         `Inertia - A webpage inspired by Momentum, providing a personal dashboard featuring to-do lists, weather, and inspirational quotes.
         <br /><a
-            href="https://liyunze-coding.github.io/home/"
+            href="https://liyunze-coding.github.io/inertia/"
             class="github-repo"
             target="_blank"
             >Demo</a
@@ -87,7 +87,6 @@ function currentSlide(n) {
 
 
 function showSlides(n) {
-    
 	let i;
 	let dots = document.getElementsByClassName("dot");
 
