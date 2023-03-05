@@ -153,6 +153,8 @@ section {
 	border-radius:20px;
 	margin-bottom: 20px;
 	margin-right:auto;
+
+	height:180px;
 }
 
 p {
@@ -280,6 +282,8 @@ a.socials {
 
 .item-icon {
 	margin-top:10px;
+
+	height:60px;
 }
 
 /*carousel*/
